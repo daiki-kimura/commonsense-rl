@@ -19,7 +19,7 @@ conda create -n twc python=3.7 numpy scipy ipython matplotlib
 conda activate twc
 conda install pytorch=1.3.0 torchvision cudatoolkit=9.2 -c pytorch
 pip install textworld==1.2.0
-conda install  nltk gensim networkx unidecode
+conda install  nltk gensim==3.8.3 networkx unidecode
 pip install -U spacy
 python -m spacy download en_core_web_sm
 python -m nltk.downloader 'punkt'
