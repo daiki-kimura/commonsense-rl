@@ -5,11 +5,11 @@ from time import time
 import torch
 import pickle
 import agent
-from utils import extractor
-from utils.generic import getUniqueFileHandler
-from utils.kg import construct_kg, load_manual_graphs, RelationExtractor
-from utils.textworld_utils import get_goal_graph
-from utils.nlp import Tokenizer
+from utils_twc import extractor
+from utils_twc.generic import getUniqueFileHandler
+from utils_twc.kg import construct_kg, load_manual_graphs, RelationExtractor
+from utils_twc.textworld_utils import get_goal_graph
+from utils_twc.nlp import Tokenizer
 from games import dataset
 
 
@@ -230,7 +230,7 @@ if __name__ == '__main__':
     parser.add_argument('--emb_loc', default='embeddings/', help='Path to the embedding location')
     parser.add_argument('--word_emb_type', default='glove',
                         help='Embedding type for the observation and the actions: ...'
-                             '(random, glove, numberbatch, fasttext). Use utils.generic.load_embedings ...'
+                             '(random, glove, numberbatch, fasttext). Use utils_twc.generic.load_embedings ...'
                              ' to take car of the custom embedding locations')
     parser.add_argument('--graph_emb_type', help='Knowledge Graph Embedding type for actions: (numberbatch, complex)')
     parser.add_argument('--egreedy_epsilon', type=float, default=0.0, help="Epsilon for the e-greedy exploration")

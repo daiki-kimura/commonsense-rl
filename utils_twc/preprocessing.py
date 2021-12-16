@@ -1,6 +1,6 @@
-from utils.textworld_utils import load_games, extract_entities
-from utils.kg import construct_kg, kg_match, shortest_path_seed_expansion, ego_graph_seed_expansion, save_graph_tsv
-from utils.extractor import any_substring_extraction
+from utils_twc.textworld_utils import load_games, extract_entities
+from utils_twc.kg import construct_kg, kg_match, shortest_path_seed_expansion, ego_graph_seed_expansion, save_graph_tsv
+from utils_twc.extractor import any_substring_extraction
 import networkx as nx
 from pathlib import Path
 

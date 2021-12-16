@@ -1,6 +1,6 @@
 import networkx as nx
 import csv
-from utils.kg import add_triplets_to_graph, draw_graph, construct_kg
+from utils_twc.kg import add_triplets_to_graph, draw_graph, construct_kg
 
 
 def shortest_path_subgraph(kg_graph, prev_graph, nodes, path_len=2, add_all_path=False):
@@ -56,8 +56,8 @@ def get_sample_states():
 
 
 if __name__ == '__main__':
-    from utils import extractor
-    from utils.nlp import Tokenizer
+    from utils_twc import extractor
+    from utils_twc.nlp import Tokenizer
 
     tk_extractor = extractor.get_extractor('max')
     tokenizer = Tokenizer(extractor=tk_extractor)

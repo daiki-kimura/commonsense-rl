@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-from utils.generic import masked_softmax
+from utils_twc.generic import masked_softmax
 
 
 def emb_layer(keyed_vectors, trainable=False):

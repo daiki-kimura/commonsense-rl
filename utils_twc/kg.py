@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 from collections import defaultdict
-from utils.generic import escape_entities
+from utils_twc.generic import escape_entities
 
 # Logging formatting
 FORMAT = '%(asctime)s %(message)s'
@@ -394,8 +394,8 @@ def save_graph_tsv(graph, path):
 
 
 if __name__ == '__main__':
-    from utils import extractor
-    from utils.nlp import Tokenizer
+    from utils_twc import extractor
+    from utils_twc.nlp import Tokenizer
 
     tk_extractor = extractor.get_extractor('max')
     tokenizer = Tokenizer(extractor=tk_extractor)

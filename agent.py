@@ -9,10 +9,10 @@ from typing import Mapping, Any
 from collections import defaultdict
 import scorer
 import re
-from utils.generic import load_embeddings, max_len, to_tensor
-from utils.textworld_utils import serialize_facts, process_full_facts, process_step_facts
-from utils.kg import construct_graph, add_triplets_to_graph, shortest_path_subgraph, khop_neighbor_graph, ego_graph_seed_expansion
-from utils.extractor import any_substring_extraction
+from utils_twc.generic import load_embeddings, max_len, to_tensor
+from utils_twc.textworld_utils import serialize_facts, process_full_facts, process_step_facts
+from utils_twc.kg import construct_graph, add_triplets_to_graph, shortest_path_subgraph, khop_neighbor_graph, ego_graph_seed_expansion
+from utils_twc.extractor import any_substring_extraction
 
 # Agent must have train(), test(), act() functions and infos_to_request as properties
 
@@ -120,7 +120,7 @@ class KnowledgeAwareAgent:
         self.world_graph = {}
         self.local_graph = {}
         self.rel_extractor.agent_loc = ''
-        self.current_facts = defaultdict(set)  # unserialized facts, use serialize_facts() from utils
+        self.current_facts = defaultdict(set)  # unserialized facts, use serialize_facts() from utils_twc
 
     @property
     def infos_to_request(self) -> EnvInfos:

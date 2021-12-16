@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from models import PretrainedEmbeddings, GAT, CQAttention, SelfAttention, Attention
-from utils.generic import masked_softmax
+from utils_twc.generic import masked_softmax
 
 
 class CommandScorerWithKG(nn.Module):
